@@ -33,36 +33,21 @@ from rest_framework.response import Response
 from .models import Vehicle, Order
 from .algorithms.assignment import assign_orders_greedy
 
-
 @api_view(['POST'])
 def run_assignment_algorithm(request):
-    """
-    API endpoint to trigger the greedy assignment algorithm.
-    """
-    if request.method=="POST":
-
-      vehicles = list(Vehicle.objects.all())
+    vehicles = list(Vehicle.objects.all())
     orders = list(Order.objects.filter(delivered=False))
 
     if not vehicles or not orders:
         return Response({"message": "Need both vehicles and pending orders to run assignment."})
 
-    # Run our custom algorithm
     results = assign_orders_greedy(vehicles, orders)
-
-    # Here you could save the updated vehicle loads to the database if you wanted:
-    # for assignment in results:
-    #     v = Vehicle.objects.get(id=assignment['vehicle_id'])
-    #     o = Order.objects.get(id=assignment['order_id'])
-    #     v.current_load += o.weight
-    #     v.save()
 
     return Response({
         "message": "Assignment complete",
         "total_assigned": len(results),
         "assignments": results
     })
-
 
 from .algorithms.pathfinding import Graph, dijkstra_algorithm, a_star_algorithm
 
