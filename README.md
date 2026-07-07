@@ -14,7 +14,7 @@ The platform is built using **Django**, **React**, **SQLite**, **Leaflet**, and 
 
 ---
 
-# 🎯 Objectives
+#  Objectives
 
 - Optimize delivery routes
 - Reduce travel distance
