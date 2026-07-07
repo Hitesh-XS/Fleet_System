@@ -1,4 +1,4 @@
-# 🚚 Real-Time Fleet Route Optimization Platform
+#  Real-Time Fleet Route Optimization Platform
 
 A full-stack logistics and fleet management platform that optimizes delivery routes, assigns deliveries intelligently, and provides real-time vehicle tracking using graph algorithms, WebSockets, and interactive maps.
 
