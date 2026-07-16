@@ -7,7 +7,7 @@ import requests
 def get_real_road_coordinates(start_lat, start_lng, end_lat, end_lng):
     print(f"🗺️ Asking OSRM for the real street route...")
 
-    # OSRM expects coordinates in Longitude,Latitude format
+  \
     url = f"http://router.project-osrm.org/route/v1/driving/{start_lng},{start_lat};{end_lng},{end_lat}?overview=full&geometries=geojson"
 
     response = requests.get(url)
