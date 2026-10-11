@@ -5,7 +5,7 @@
       "root": ".",
       "framework": "django",
       "environment": {
-        "DJANGO_SETTINGS_MODULE": "YOUR_FOLDER_NAME.settings"
+        "DJANGO_SETTINGS_MODULE": "delivery.settings"
       }
     },
     "frontend": {
